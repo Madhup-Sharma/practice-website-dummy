@@ -37,7 +37,7 @@ function displayBagSummary(){
     let totalItems = bagItemObjects.length;
     let totalMRP = 0;
     let totalDiscount = 0;
-
+    let finalPayment = 0;
 
     // Calculation part
 
@@ -47,8 +47,10 @@ function displayBagSummary(){
 
             
     });
+    if(totalDiscount > 0 || totalMRP > 0){
 
-    let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+      finalPayment += totalMRP - totalDiscount + CONVENIENCE_FEES;
+    }
 
 
 
